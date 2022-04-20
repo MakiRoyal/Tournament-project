@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+      <header>
+        <h1>gggggg</h1>
+        {% block header %}
+            <div>
+                <img src="https://media.discordapp.net/attachments/951121617642205184/966374494497280000/unknown.png">
+                <a href="">Produits</a>
+                <a href="">En savoir plus</a>
+                <a href="">Assistance</a>
+                <a href="">Télécharger</a>
+            </div>
+            <div>
+                <button>FR/</button>
+                <button>/ENG</button>
+                {% if session %}
+                    <a href="">Logout</a>
+                {% else %}
+                    <a href="">Connexion</a>
+                {% endif %}
+            </div>
+        {% endblock %}
+    </header>
+{% endblock %}

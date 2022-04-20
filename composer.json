@@ -1,0 +1,19 @@
+{   
+    "name": "ryan/miilove",
+    "autoload": {
+        "psr-4": {
+            "Mvc\\": "src/",
+            "Config\\": "config/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ryan",
+            "email": "ryan.ez-zerqti@epitech.digital"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.0",
+        "bramus/router": "~1.6"
+    }
+}
