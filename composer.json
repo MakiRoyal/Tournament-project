@@ -1,5 +1,5 @@
-{   
-    "name": "ryan/miilove",
+{
+    "name": "ryan/projet",
     "autoload": {
         "psr-4": {
             "Mvc\\": "src/",
@@ -8,12 +8,12 @@
     },
     "authors": [
         {
-            "name": "Ryan",
-            "email": "ryan.ez-zerqti@epitech.digital"
+            "name": "Manapyzz",
+            "email": "alexandreb.picard@gmail.com"
         }
     ],
     "require": {
-        "twig/twig": "^2.0",
+        "twig/twig": "^3.3",
         "bramus/router": "~1.6"
     }
 }

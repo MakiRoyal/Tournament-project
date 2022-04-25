@@ -5,18 +5,63 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}{% endblock %}</title>
-    <link href="assets/style/style.css" rel="stylesheet" type="text/css" />
     <link href="assets/style/reset.css" rel="stylesheet" type="text/css" />
-    {% block stylesheets %}{% endblock %}
+    <link href="assets/style/style.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
 </head>
-<body id="body">
-{% block content %}
+<body>
+    <header>
+        <div>
+            <nav>
+                <img alt="Logo MiiLove" src="https://media.discordapp.net/attachments/951121617642205184/966374494497280000/unknown.png">
+                <a href="">Produits</a>
+                <a href="">En savoir plus</a>
+                <a href="">Assistance</a>
+                <a href="">Télécharger</a>
+            </nav>
+            <nav>
+                <a href="">Francais</a>
+                <a class="buttonConnexion" href="">Connexion</a>
+            </nav>
+        </div>
+        <article>
+            <h1>MiiLove</h1>
+            <h2>Une cause qui rasemble</h2>
+            <a href="">Créer un compte</a>
+        </article>
+    </header>
 
 
 
 
 
-{% endblock %}
+
+    <footer>
+        <div>
+            <h5>Mention légale</h5>
+            <h6>Confidentialité</h6>
+            <h6>Conditions d'utilisation</h6>
+            <h6>Politique relative aux cookies</h6>
+            <h6>Propriété intellectuelle</h6>
+        </div>
+        <div>
+            <h5>Emploie</h5>
+            <h6>Espace emploie</h6>
+            <h6>Blog technique</h6>
+        </div>
+        <div>
+            <h5>réseaux sociaux</h5>
+        </div>
+        <div>
+            <h5>FAQ</h5>
+            <h6>Mets destinations</h6>
+            <h6>Esapce presse</h6>
+            <h6>Contact</h6>
+            <h6>Code promotionnel</h6>
+        </div>
+    </footer>
+
+    {% block content %}{% endblock %}
+
 </body>
 </html>

@@ -7,8 +7,8 @@ use Twig\Environment;
 
 class AccueilController extends Controller
 {
-    public function displayAccueil() {
-        var_dump("gzrgzrg");
-        echo $this->twig->render('acceuil.html.twig');
+    public function displayAccueil()
+    {
+        echo $this->twig->render('base.html.twig');
     }
 }

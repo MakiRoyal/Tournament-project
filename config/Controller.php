@@ -10,9 +10,7 @@ class Controller
 
     public function __construct()
     {
-        $loader = new \Twig\Loader\FilesystemLoader('../src/View');
+        $loader = new \Twig\Loader\FilesystemLoader('../src/view');
         $this->twig = new \Twig\Environment($loader);
-
-        $this->twig->addGlobal('session', $_SESSION);
     }
 }

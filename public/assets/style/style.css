@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&family=Montserrat:wght@300;400;600;700&family=Roboto&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+a, h1, h2{
+    font-family: Montserrat ;
+}
+header{
+    background-image: url('https://cdn.discordapp.com/attachments/951121617642205184/968107498722709554/unknown.png');
+    display: flex;
+    flex-direction: column;
+}
+div{
+    margin: 0px 50px 0px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+img{
+    width: 20%;
+    align-self: center;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    align-self: center;
+    margin-top: 20px;
+}
+.buttonConnexion{
+    background-color: white;
+    border-radius: 5px;
+    color: #d3075f;
+    padding: 10px 15px 10px 15px;
+    font-weight: 600 ;
+    font-size: 20px;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    margin: 500px 0px 200px 200px;
+}
+h1{
+    color: white;
+    font-size: 100px;
+    font-weight: 700 ;
+}
+h2{
+    color: white;
+    font-size: 50px;
+}
+article a{
+    align-self: flex-start;
+    background: linear-gradient(to left, #d3075f, #009fe3);
+    border-radius: 25px;
+    padding: 15px 30px 15px 30px;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: black;
+}
+footer h5{
+    color: white;
+}
+footer h6{
+    color: white;
+}
