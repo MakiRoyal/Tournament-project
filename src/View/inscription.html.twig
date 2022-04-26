@@ -45,17 +45,34 @@
                         <ul>
                             <li><h5>Genre</h5></li>
                             <li><aside class="button-wrap">
-                                <input class="hidden radio-label" id="yes-button" type="radio" name="accept-offers" checked="checked" value="Homme"/>
+                                <input class="hidden radio-label" id="yes-button" type="radio" name="gender" checked="checked" value="Homme"/>
                                 <label class="button-label" for="yes-button">
                                     <h1>Homme</h1>
                                 </label>
-                                <input class="hidden radio-label" id="no-button" type="radio" name="accept-offers" value="Femme"/>
+                                <input class="hidden radio-label" id="no-button" type="radio" name="gender" value="Femme"/>
                                 <label class="button-label" for="no-button">
                                     <h1>Femme</h1>
                                 </label>
-                                <input class="hidden radio-label" id="maybe-button" type="radio" name="accept-offers" value="Autres"/>
+                                <input class="hidden radio-label" id="maybe-button" type="radio" name="gender" value="Autres"/>
                                 <label class="button-label" for="maybe-button">
                                     <h1>Autres</h1>
+                                </label>
+                            </aside></li>
+                        </ul>
+                        <ul>
+                            <li><h5>Cause Militante</h5></li>
+                            <li><aside class="button-wrap">
+                                <input class="hidden radio-label" id="animaux" type="radio" name="causes" checked="checked" value="Cause animalière"/>
+                                <label class="button-label" for="animaux">
+                                    <h1>Cause animalière</h1>
+                                </label>
+                                <input class="hidden radio-label" id="egaliteHF" type="radio" name="causes" value="Égalité homme/femme"/>
+                                <label class="button-label" for="egaliteHF">
+                                    <h1>Égalité homme/femme</h1>
+                                </label>
+                                <input class="hidden radio-label" id="evironement" type="radio" name="causes" value="Cause environnementale"/>
+                                <label class="button-label" for="evironement">
+                                    <h1>Cause environnementale</h1>
                                 </label>
                             </aside></li>
                         </ul>
@@ -75,48 +92,28 @@
                 <article>
                     <h5>Photo</h5>
                     <aside>
+                        <label for="finput1" class="labelCanvas">+</label>
                         <canvas id= "canv1" ></canvas>
                         <input type="file" multiple="false" accept="image/*" onchange="upload1()" id="finput1">
-                        <label for="finput1" class="labelCanvas">+</label>
+                        <label for="finput2" class="labelCanvas">+</label>
                         <canvas id= "canv2" ></canvas>
                         <input type="file" multiple="false" accept="image/*" onchange="upload2()" id="finput2">
-                        <label for="finput2" class="labelCanvas">+</label>
+                        <label for="finput3" class="labelCanvas">+</label>
                         <canvas id= "canv3" ></canvas>
                         <input type="file" multiple="false" accept="image/*" onchange="upload3()" id="finput3">
-                        <label for="finput3" class="labelCanvas">+</label>
+                        <label for="finput4" class="labelCanvas">+</label>
                         <canvas id= "canv4" ></canvas>
                         <input type="file" multiple="false" accept="image/*" onchange="upload4()" id="finput4">
-                        <label for="finput4" class="labelCanvas">+</label>
+                        <label for="finput5" class="labelCanvas">+</label>
                         <canvas id= "canv5" ></canvas>
                         <input type="file" multiple="false" accept="image/*" onchange="upload5()" id="finput5">
-                        <label for="finput5" class="labelCanvas">+</label>
+                        <label for="finput6" class="labelCanvas">+</label>
                         <canvas id= "canv6" ></canvas>
                         <input type="file" multiple="false" accept="image/*" onchange="upload6()" id="finput6">
-                        <label for="finput6" class="labelCanvas">+</label>
                     </aside>
                 </article>
             </div>
-            <ul>
-                <h3>Choix de la cause militante</h3>
-                <aside>
-                    <div>
-                        <img alt="animaux pas contents" src="">
-                        <h5>Cause animalière</h5>
-                        <p>En 2018 plus de 1 200 personnes en France maltraite/abandonne leurs animaux, sauvons les.    </p>
-                    </div>
-                    <div>
-                        <img alt="tous pareils" src="">
-                        <h5>Égalité homme/femme </h5>
-                        <p>Malgré un corpus législatif pour l'égalité professionnelle, la situation des femmes sur le marché du travail reste plus fragile que celle des hommes.   </p>
-                    </div>
-                    <div>
-                        <img alt="la terre pleure" src="">
-                        <h5>Cause environnementale </h5>
-                        <p>Malgré un corpus législatif pour l'égalité professionnelle, la situation des femmes sur le marché du travail reste plus fragile que celle des hommes.   </p>
-                    </div>
-                </aside>
-                <a href="">inscription</a>
-            </ul>
+            <input type="submit" name="buttonInscription" class="buttonInscription">
         </from>
     </section>
   

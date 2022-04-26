@@ -86,6 +86,17 @@ h3{
     border: 1px solid #D3075F;
     color: white;
   }
+
+  #animaux:checked + .button-label {
+    background: #D3075F;
+    border: 1px solid #D3075F;
+    color: white;
+  }
+  #animaux:checked + .button-label:hover {
+    background: #D3075F;
+    border: 1px solid #D3075F;
+    color: white;
+  }
   
   #no-button:checked + .button-label {
     background: #D3075F;
@@ -97,6 +108,17 @@ h3{
     color: white;
     border: 1px solid #D3075F;
   }
+
+  #egaliteHF:checked + .button-label {
+    background: #D3075F;
+    color: white;
+    border: 1px solid #D3075F;
+  }
+  #egaliteHF:checked + .button-label:hover {
+    background: #D3075F;
+    color: white;
+    border: 1px solid #D3075F;
+  }
   
   #maybe-button:checked + .button-label {
     background: #D3075F;
@@ -104,6 +126,16 @@ h3{
     border: 1px solid #D3075F;
   }
   #maybe-button:checked + .button-label:hover {
+    background: #D3075F;
+    color: white;
+    border: 1px solid #D3075F;
+  }
+  #evironement:checked + .button-label {
+    background: #D3075F;
+    color: white;
+    border: 1px solid #D3075F;
+  }
+  #evironement:checked + .button-label:hover {
     background: #D3075F;
     color: white;
     border: 1px solid #D3075F;
@@ -131,7 +163,7 @@ h3{
   #inscription form div {
     display: flex;
     flex-direction: row;
-    gap: 70px;
+    gap: 200px;
   }  
   #inscription form article{
       display: flex;
@@ -171,7 +203,7 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 40px;
+    gap: 10px;
 }  
 #inscription form ul h3 {
     color: #707070;
@@ -201,13 +233,19 @@ h3{
 #inscription form ul aside div p{
     text-align: center;
 }
-#inscription form ul a {
-    align-self: center;
-    background: linear-gradient(to left, #d3075f, #009fe3);
-    border-radius: 25px;
-    padding: 15px 30px 15px 30px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 600;
-    color: white;
+#inscription div input {
+  border: solid 2px black;
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+}
+.buttonInscription{
+  align-self: center;
+  background: linear-gradient(to left, #d3075f, #009fe3);
+  font-weight: 600;
+  color: white;
+  font-size: 20px;
+  border-radius: 30px;
+  padding: 15px 50px 15px 50px;
+  text-transform: uppercase;
+  border: none;
 }
