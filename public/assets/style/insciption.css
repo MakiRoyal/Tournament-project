@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&family=Montserrat:wght@300;400;600;700&family=Roboto&display=swap');
+a, h1, h2, h3, h4, h5,h6, p{
+    font-family: Montserrat;
+}
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 70px 20px 70px;
+}
+header img{
+    width: 50%;
+}
+header .trad {
+    color: #d3075f;
+    border-radius: 5px;
+    border: 1px solid #d3075f;
+    text-decoration: none;
+    align-self: center;
+    padding: 10px 15px 10px 15px;
+    font-family: Montserrat;
+}
+.line{
+    background: linear-gradient(to left, #d3075f, #009fe3);
+    width: 100vw;
+    height: 15px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    color: #707070;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+  
+  
+  .button-wrap {
+    display:  flex;
+    flex-direction: row;
+  }
+  .button-label {
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #292929;
+    border-radius: 0.25em;
+    background: white;
+    border: 1px solid black;
+    transition: 0.3s;
+  }
+  .button-label h1 {
+    font-size: 1em;
+    font-family: "Lato", sans-serif;
+  }
+  .button-label:hover {
+    background: white;
+    color: #D3075F;
+    border: 1px solid #D3075F    ;
+  }
+  .button-label:active {
+    transform: translateY(2px);
+  }
+  
+  #yes-button:checked + .button-label {
+    background: #D3075F;
+    border: 1px solid #D3075F;
+    color: white;
+  }
+  #yes-button:checked + .button-label:hover {
+    background: #D3075F;
+    border: 1px solid #D3075F;
+    color: white;
+  }
+  
+  #no-button:checked + .button-label {
+    background: #D3075F;
+    color: white;
+    border: 1px solid #D3075F;
+  }
+  #no-button:checked + .button-label:hover {
+    background: #D3075F;
+    color: white;
+    border: 1px solid #D3075F;
+  }
+  
+  #maybe-button:checked + .button-label {
+    background: #D3075F;
+    color: white;
+    border: 1px solid #D3075F;
+  }
+  #maybe-button:checked + .button-label:hover {
+    background: #D3075F;
+    color: white;
+    border: 1px solid #D3075F;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+
+
+
+
+
+  #inscription{
+    display: flex;
+    flex-direction: row;
+    margin: 50px 200px 0px 200px;
+  }
+  #inscription form{
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+  }
+  #inscription form div {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+  }  
+  #inscription form article{
+      display: flex;
+      flex-direction: column;
+  }
+  #inscription article div {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+  }  
+  #inscription article div div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+  #inscription article aside input{
+      display: none;
+  }
+  #inscription article aside .labelCanvas{
+    font-size: 40px;
+    font-family: montserrat;
+    font-weight: 600;
+    color: white;
+    background-color: #009fe3;
+    border-radius: 50%;
+    padding: 2px 14px 2px 14px;
+}
+  #inscription article aside canvas {
+    width: 170px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-top: 5px;
+  }
+  #inscription form ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}  
+#inscription form ul h3 {
+    color: #707070;
+    font-weight: 600;
+}  
+#inscription form ul aside{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+#inscription form ul aside div{
+    display: flex;
+    flex-direction: column;
+    background-color: #D3D7DE;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 20px;
+    padding: 20px 15px 20px 15px;
+}
+#inscription form ul aside div img{
+    align-self: center;
+    border-radius: 50%;
+}
+#inscription form ul aside div h5{
+    align-self: center;
+}
+#inscription form ul aside div p{
+    text-align: center;
+}
+#inscription form ul a {
+    align-self: center;
+    background: linear-gradient(to left, #d3075f, #009fe3);
+    border-radius: 25px;
+    padding: 15px 30px 15px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}

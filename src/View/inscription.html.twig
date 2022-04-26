@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/style/reset.css" rel="stylesheet" type="text/css" />
+    <link href="assets/style/insciption.css" rel="stylesheet" type="text/css" />
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="/"><img alt="Logo MiiLove" src="https://media.discordapp.net/attachments/951121617642205184/966374494497280000/unknown.png"></a>
+        <a href="" class="trad">Francais</a>
+    </header>
+    <div class="line" ></div>
+    <h3>Créer un compte</h3>
+
+    <section id="inscription">            
+        <form method="POST" action="">
+            <div>
+                <article>
+                        <div>
+                            <div>
+                                <h5>Prénom</h5>
+                                <input type="text" name="firstname">
+                            </div>
+                            <div>
+                                <h5>Nom</h5>
+                                <input type="text" name="lastname">
+                            </div>
+                        </div>
+                    <div>
+                            <div>
+                                <h5>Ville</h5>
+                                <input type="text" name="city">
+                            </div>
+                            <div>
+                                <h5>Age</h5>
+                                <input type="text" name="age">
+                            </div>
+                        </div>
+                        <ul>
+                            <li><h5>Genre</h5></li>
+                            <li><aside class="button-wrap">
+                                <input class="hidden radio-label" id="yes-button" type="radio" name="accept-offers" checked="checked" value="Homme"/>
+                                <label class="button-label" for="yes-button">
+                                    <h1>Homme</h1>
+                                </label>
+                                <input class="hidden radio-label" id="no-button" type="radio" name="accept-offers" value="Femme"/>
+                                <label class="button-label" for="no-button">
+                                    <h1>Femme</h1>
+                                </label>
+                                <input class="hidden radio-label" id="maybe-button" type="radio" name="accept-offers" value="Autres"/>
+                                <label class="button-label" for="maybe-button">
+                                    <h1>Autres</h1>
+                                </label>
+                            </aside></li>
+                        </ul>
+                        <div>
+                            <div>
+                                <h5>Adresse e-mail</h5>
+                                <input type="text" name="mail">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h5>Mot de passe</h5>
+                                <input type="text" name="password">
+                            </div>
+                        </div>
+                </article>
+                <article>
+                    <h5>Photo</h5>
+                    <aside>
+                        <canvas id= "canv1" ></canvas>
+                        <input type="file" multiple="false" accept="image/*" onchange="upload1()" id="finput1">
+                        <label for="finput1" class="labelCanvas">+</label>
+                        <canvas id= "canv2" ></canvas>
+                        <input type="file" multiple="false" accept="image/*" onchange="upload2()" id="finput2">
+                        <label for="finput2" class="labelCanvas">+</label>
+                        <canvas id= "canv3" ></canvas>
+                        <input type="file" multiple="false" accept="image/*" onchange="upload3()" id="finput3">
+                        <label for="finput3" class="labelCanvas">+</label>
+                        <canvas id= "canv4" ></canvas>
+                        <input type="file" multiple="false" accept="image/*" onchange="upload4()" id="finput4">
+                        <label for="finput4" class="labelCanvas">+</label>
+                        <canvas id= "canv5" ></canvas>
+                        <input type="file" multiple="false" accept="image/*" onchange="upload5()" id="finput5">
+                        <label for="finput5" class="labelCanvas">+</label>
+                        <canvas id= "canv6" ></canvas>
+                        <input type="file" multiple="false" accept="image/*" onchange="upload6()" id="finput6">
+                        <label for="finput6" class="labelCanvas">+</label>
+                    </aside>
+                </article>
+            </div>
+            <ul>
+                <h3>Choix de la cause militante</h3>
+                <aside>
+                    <div>
+                        <img alt="animaux pas contents" src="">
+                        <h5>Cause animalière</h5>
+                        <p>En 2018 plus de 1 200 personnes en France maltraite/abandonne leurs animaux, sauvons les.    </p>
+                    </div>
+                    <div>
+                        <img alt="tous pareils" src="">
+                        <h5>Égalité homme/femme </h5>
+                        <p>Malgré un corpus législatif pour l'égalité professionnelle, la situation des femmes sur le marché du travail reste plus fragile que celle des hommes.   </p>
+                    </div>
+                    <div>
+                        <img alt="la terre pleure" src="">
+                        <h5>Cause environnementale </h5>
+                        <p>Malgré un corpus législatif pour l'égalité professionnelle, la situation des femmes sur le marché du travail reste plus fragile que celle des hommes.   </p>
+                    </div>
+                </aside>
+                <a href="">inscription</a>
+            </ul>
+        </from>
+    </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        function upload1(){
+            var imgcanvas = document.getElementById("canv1");
+            var fileinput = document.getElementById("finput1");
+            var image1 = new SimpleImage(fileinput);
+            image1.drawTo(imgcanvas);
+        }
+        function upload2(){
+            var imgcanvas = document.getElementById("canv2");
+            var fileinput = document.getElementById("finput2");
+            var image2 = new SimpleImage(fileinput);
+            image2.drawTo(imgcanvas);
+        }
+        function upload3(){
+            var imgcanvas = document.getElementById("canv3");
+            var fileinput = document.getElementById("finput3");
+            var image3 = new SimpleImage(fileinput);
+            image3.drawTo(imgcanvas);         
+        }
+        function upload4(){
+            var imgcanvas = document.getElementById("canv4");
+            var fileinput = document.getElementById("finput4");
+            var image4 = new SimpleImage(fileinput);
+            image4.drawTo(imgcanvas);         
+        }
+        function upload5(){
+            var imgcanvas = document.getElementById("canv5");
+            var fileinput = document.getElementById("finput5");
+            var image5 = new SimpleImage(fileinput);
+            image5.drawTo(imgcanvas);
+        }
+        function upload6(){
+            var imgcanvas = document.getElementById("canv6");
+            var fileinput = document.getElementById("finput6");
+            var image6 = new SimpleImage(fileinput);
+            image6.drawTo(imgcanvas);
+        }
+    </script>
+    {% block content %}{% endblock %}
+
+</body>
+</html>

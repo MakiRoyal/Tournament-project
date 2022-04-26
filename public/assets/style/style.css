@@ -11,28 +11,28 @@ header{
     display: flex;
     flex-direction: column;
 }
-div{
-    margin: 0px 50px 0px 50px;
+header div{
+    margin: 0px 70px 0px 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-nav{
+header div nav{
     margin-top: 20px;
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
-img{
-    width: 20%;
+header div nav img{
+    width: 17%;
     align-self: center;
 }
-a{
+header div nav a{
     color: white;
     text-decoration: none;
     font-size: 22px;
     align-self: center;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 .buttonConnexion{
     background-color: white;
@@ -45,7 +45,7 @@ a{
 article{
     display: flex;
     flex-direction: column;
-    margin: 500px 0px 200px 200px;
+    margin: 400px 0px 200px 200px;
 }
 h1{
     color: white;
@@ -64,6 +64,8 @@ article a{
     margin-top: 50px;
     font-size: 20px;
     font-weight: 600;
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -81,10 +83,23 @@ article a{
 
 footer{
     background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content:    center;
+    gap: 160px;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
 }
 footer h5{
     color: white;
+    font-family: montserrat;
+    font-weight: 600;
 }
 footer h6{
     color: white;
+    font-family: montserrat;
 }
