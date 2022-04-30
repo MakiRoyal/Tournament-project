@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&family=Montserrat:wght@300;400;600;700&family=Roboto&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+a, h1, h2{
+    font-family: Montserrat ;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 50px 20px 50px;
+}
+header div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-self: flex-end;
+    border: 1px solid black;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+}
+#burger-checkbox{
+    display: none;
+}
+header div label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+header img{
+    width: 10%;
+}
+header button{
+    align-self: flex-end;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    background: linear-gradient(to left, #d3075f, #009fe3);
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.line{
+    background: linear-gradient(to left, #d3075f, #009fe3);
+    width: 100vw;
+    height: 15px;
+}
+
+.menu-wrapper {
+    position: fixed;
+    bottom: -138px;
+    left: -100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    transition: all .5s ease-in-out;
+    border: none;
+}
+.menu-wrapper nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-wrapper nav ul li{
+    width: 200px;
+    border: 1px solid grey;
+    padding: 20px 20px 20px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: white;
+}
+.menu-wrapper nav ul li div{
+    height: 230px;
+    border: none;
+}
+.menu-wrapper nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+#burger-checkbox:checked ~ .menu-wrapper {
+    left: 0;
+}
+

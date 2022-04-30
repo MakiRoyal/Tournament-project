@@ -9,6 +9,7 @@ class AccueilController extends Controller
 {
     public function displayAccueil()
     {
-        echo $this->twig->render('base.html.twig');
+        // var_dump($_SESSION);
+        echo $this->twig->render('accueil.html.twig');
     }
 }

@@ -18,8 +18,12 @@ class UserController extends Controller
     public function createUser()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-           
-            $this->userModel->createUser($_POST['firstname'], $_POST['lastname'], $_POST['age'], $_POST['city'], $_POST['mail'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['gender'], $_POST["causes"]);
+            $from = $_FILES['image']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image']['name'];
+            if (move_uploaded_file($from, $to))
+            {
+                $this->userModel->createUser($_POST['firstname'], $_POST['lastname'], $_POST['age'], $_POST['city'], $_POST['mail'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['gender'], $_POST["causes"], $_FILES['image']['name']);
+            }
 
             header('location: /');
             exit();
@@ -42,9 +46,9 @@ class UserController extends Controller
                     'city' => $account['city'],
                     'gender' => $account['gender'],
                     'militantCause' => $account['militantCause'],
+                    'image1' => $account['image1'],
                 ];
-                var_dump("dbdsgdfg");
-                header('Location: /inscription');
+                header('Location: /accueil');
                 exit();
             }
         }

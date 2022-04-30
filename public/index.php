@@ -13,6 +13,8 @@ $router->post('/', 'Mvc\Controller\UserController@login');
 $router->get('/inscription', 'Mvc\Controller\UserController@createUser');
 $router->post('/inscription', 'Mvc\Controller\UserController@createUser');
 
+$router->get('/accueil', 'Mvc\Controller\AccueilController@displayAccueil');
+
 $router->run();
 
 ?>

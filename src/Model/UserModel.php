@@ -9,10 +9,10 @@ use PDO;
 class UserModel extends Model
 {
 
-    public function createUser(string $firstname, string $lastname, string $age, string $city, string $mail, string $password, string $gender, string $militantCause) 
+    public function createUser(string $firstname, string $lastname, string $age, string $city, string $mail, string $password, string $gender, string $militantCause, string $image1) 
     {
 
-        $statement = $this->pdo->prepare('INSERT INTO `users` (`firstname`, `lastname`, `age`, `city`, `mail`, `password` , `gender` , `militantCause`) VALUES (:firstname, :lastname, :age, :city, :mail, :password, :gender, :militantCause)');
+        $statement = $this->pdo->prepare('INSERT INTO `users` (`firstname`, `lastname`, `age`, `city`, `mail`, `password` , `gender` , `militantCause`, `image1`) VALUES (:firstname, :lastname, :age, :city, :mail, :password, :gender, :militantCause, :image1)');
 
         $statement->execute([
             'firstname' => $firstname,
@@ -22,7 +22,8 @@ class UserModel extends Model
             'mail' => $mail,
             'password' => $password,
             'gender' => $gender,
-            'militantCause' => $militantCause
+            'militantCause' => $militantCause,
+            'image1' => $image1
         ]);
     }
 
