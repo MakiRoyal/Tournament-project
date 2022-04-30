@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="assets/style/reset.css" rel="stylesheet" type="text/css" />
     <link href="assets/style/style.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Document</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
             </nav>
             <nav>
                 <a href="">Francais</a>
-                <a class="buttonConnexion" href="">Connexion</a>
+                <a class="buttonConnexion" >Connexion</a>
             </nav>
         </div>
         <article>
@@ -60,6 +61,21 @@
             <h6>Code promotionnel</h6>
         </div>
     </footer>
+
+
+    <script type="text/javascript">
+        let buttonConnexion = document.querySelector(".buttonConnexion")
+        buttonConnexion.addEventListener("click" ,function(){
+             Swal.fire({
+                title: '<h1 style="color : black; font-size : 30px ">Connection</h1>',
+                html:
+                    '<form method="POST"><input type="text" name="mail"> <input type="text" name="password"><input type="submit" value="Connect"></form> ',
+                showCloseButton: true,
+                showCancelButton: false,
+                focusConfirm: false,
+            }) 
+        })
+    </script>
 
     {% block content %}{% endblock %}
 

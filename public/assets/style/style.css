@@ -33,6 +33,7 @@ header div nav a{
     font-size: 22px;
     align-self: center;
     margin-top: 25px;
+    cursor: pointer;
 }
 .buttonConnexion{
     background-color: white;
@@ -103,3 +104,7 @@ footer h6{
     color: white;
     font-family: montserrat;
 }
+
+
+
+

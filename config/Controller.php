@@ -12,5 +12,6 @@ class Controller
     {
         $loader = new \Twig\Loader\FilesystemLoader('../src/view');
         $this->twig = new \Twig\Environment($loader);
+        $this->twig->addGlobal('session', $_SESSION);
     }
 }
