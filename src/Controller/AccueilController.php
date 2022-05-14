@@ -12,4 +12,17 @@ class AccueilController extends Controller
         // var_dump($_SESSION);
         echo $this->twig->render('accueil.html.twig');
     }
+
+    public function displayProfil()
+    {
+        // var_dump($_SESSION);
+        echo $this->twig->render('profil.html.twig');
+    }
+
+    public function displaySub()
+    {
+        // var_dump($_SESSION);
+        echo $this->twig->render('abonnement.html.twig');
+    }
 }
+

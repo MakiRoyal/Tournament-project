@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/style/reset.css" rel="stylesheet" type="text/css" />
+    <link href="assets/style/accueil.css" rel="stylesheet" type="text/css" />
+    <link href="assets/style/abonnement.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+    <header>    
+        <div>
+            <img src="http://localhost/images/{{session.user.image1}}" alt="{{session.user.image1}}">
+            <input type="checkbox" id="burger-checkbox">
+            <label for="burger-checkbox">{{session.user.firstname}}.{{session.user.lastname}}</label>
+            <div class="menu-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="/accueil">Accueil</a></li>
+                        <li><a href="/profil">Mon Profil</a></li>
+                        <li><a href="#">Mes Articles</a></li>
+                        <li><a href="/abonnement">Pass Premium</a></li>
+                        <li><a href="#">Evenement</a></li>
+                        <li><div></div></li>
+                        <li><a href="#">Reglage</a></li>
+                        <li><a href="/deconnection">Déconnexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+       <img alt="Logo MiiLove" src="https://media.discordapp.net/attachments/951121617642205184/966374494497280000/unknown.png">
+       <button>Messages</button> 
+    </header>
+    <div class="line" ></div>
+
+    <h2>Votre abonnement actuelle : {{session.user.subscription}}</h2>
+    <section id="sub">
+        <form method="POST" action="">
+             <ul>
+                <li><h2>Pass Premium</h2></li>
+                <li>
+                    <aside class="button-wrap">
+                        <input class="hidden radio-label" id="twelveMounth" type="radio" name="sub" checked="checked" value="12mois"/>
+                        <label class="button-label" for="twelveMounth">
+                            <h3>
+                                <span>12 </span>
+                                mois
+                            </h3>
+                            <h5>
+                                <span>11,99$ / 50% </span>
+                                économiser par mois
+                            </h5>
+                        </label>
+                        <input class="hidden radio-label" id="sixMounth" type="radio" name="sub" value="6mois"/>
+                        <label class="button-label" for="sixMounth">
+                            <h3>
+                                <span>6 </span>
+                                mois
+                            </h3>
+                            <h5>
+                                <span>17,99$ / 30% </span>
+                                économiser par mois
+                            </h5>
+                        </label>
+                        <input class="hidden radio-label" id="oneMounth" type="radio" name="sub" value="1mois"/>
+                        <label class="button-label" for="oneMounth">
+                            <h3>
+                                <span>1 </span>
+                                mois
+                            </h3>
+                            <h5>
+                                <span>25,99$ </span>
+                                par mois
+                            </h5>
+                        </label>
+                    </aside>
+                 </li>
+            </ul>
+            {% if session.user.subscription == 'normal'  %}
+                 <input type="submit" name="subscription" class="button-sub" value="Acheter">
+            {% endif %}
+        
+        </form>
+    <section>
+
+
+    
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>
