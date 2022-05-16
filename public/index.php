@@ -53,7 +53,7 @@ $router->get('/', 'Mvc\Controller\AccueilController@displayAccueil');
 
 
 $router->get('/profil', 'Mvc\Controller\AccueilController@displayProfil');
-
+$router->post('/profil', 'Mvc\Controller\UserController@updateProfil');
 
 $router->get('/abonnement', 'Mvc\Controller\AccueilController@displaySub');
 $router->post('/abonnement', 'Mvc\Controller\UserController@subscription');
