@@ -1,0 +1,39 @@
+#articles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 300px 0px 300px;
+    gap: 20px;
+}
+#articles article{
+    padding: 15px 20px 15px 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start ;
+    gap: 100px;
+    border-radius: 10px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+    font-size: 25px;
+}
+#articles article div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+#articles article div a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 50px 10px 50px;
+    border-radius: 35px;
+}
+#articles article div div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}

@@ -58,6 +58,8 @@ $router->post('/profil', 'Mvc\Controller\UserController@updateProfil');
 $router->get('/abonnement', 'Mvc\Controller\AccueilController@displaySub');
 $router->post('/abonnement', 'Mvc\Controller\UserController@subscription');
 
+$router->get('/event', 'Mvc\Controller\EventController@ListEvent');
+
 $router->run();
 
 ?>

@@ -24,5 +24,11 @@ class AccueilController extends Controller
         // var_dump($_SESSION);
         echo $this->twig->render('abonnement.html.twig');
     }
+
+    public function displayEvent()
+    {
+        // var_dump($_SESSION);
+        echo $this->twig->render('event.html.twig');
+    }
 }
 
