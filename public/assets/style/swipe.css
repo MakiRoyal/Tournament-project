@@ -54,7 +54,7 @@
   }
   
   .profiles::before {
-    content:'Plus rien à matcher...';
+    content:'Plus rien à liker...';
     color:var(--dark-grey);
     display:flex;
     align-items: center;
@@ -132,7 +132,7 @@
   }
   
   .profile--matching::after, .profile--nexting::after {
-    content:'MATCH';
+    content:'BOULOT';
     font-weight: bold;
     font-size:28px;
     padding:8px 12px;
@@ -147,7 +147,7 @@
   } 
   
   .profile--nexting::after {
-    content:'NEXT';
+    content:'FLOP';
     border:solid 2px var(--red);
     color:var(--red);
   }

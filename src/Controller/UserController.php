@@ -92,7 +92,7 @@ class UserController extends Controller
 
 
 
-            $this->userModel->updateProfil($_POST['firstname'], $_POST['lastname'], $_POST['age'], $_POST['city'], $_POST['mail'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['gender'], $_POST["causes"], $_FILES['image']['name'], $_FILES['image2']['name'], $_FILES['image3']['name'], $_FILES['image4']['name'], $_FILES['image5']['name'], $_FILES['image6']['name'], $_POST['work'], $_POST['bio']);
+            $this->userModel->updateProfil($_POST['firstname'], $_POST['lastname'], $_POST['age'], $_POST['city'], $_POST['mail'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['gender'], $_POST["causes"], $_FILES['image']['name'], $_FILES['image2']['name'], $_FILES['image3']['name'], $_FILES['image4']['name'], $_FILES['image5']['name'], $_FILES['image6']['name'], $_POST['work'], $_POST['bio'], $_SESSION['user']['mail']);
             
             $_SESSION['user'] = [
                 'lastname' => $_POST['lastname'],
@@ -118,6 +118,14 @@ class UserController extends Controller
             exit();
         }
         echo $this->twig->render('profil.html.twig');
+    }
+
+
+
+
+    public function ListUsers() {
+        $users = $this->userModel->findAll();
+        echo $this->twig->render('accueil.html.twig', ['users' => $users]);
     }
 
 

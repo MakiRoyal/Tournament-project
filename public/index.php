@@ -56,7 +56,7 @@ $router->post('/login', 'Mvc\Controller\UserController@login');
 $router->get('/inscription', 'Mvc\Controller\UserController@createUser');
 $router->post('/inscription', 'Mvc\Controller\UserController@createUser');
 
-$router->get('/', 'Mvc\Controller\AccueilController@displayAccueil');
+$router->get('/', 'Mvc\Controller\UserController@ListUsers');
 
 
 $router->get('/profil', 'Mvc\Controller\AccueilController@displayProfil');

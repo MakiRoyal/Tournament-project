@@ -40,43 +40,30 @@
 
 
       <main>
-    <div class="profiles">
-      <div class="profile">
-        <div class="profile__image" style="background-image: url('http://localhost/images/woman5.jpg');"></div>
-        <div class="profile__infos">
-          <h3 class="profile__name">Rebecca<h3 class="profile__age">20</h3></h3>
-          <h5 class="profile__description">Le mafé, le bissap, j'adore ça</h5>
+        <div class="profiles">
+        {% for user in users %}
+                <div class="profile">
+                    <div class="profile__image" style="background-image: url('http://localhost/images/{{user.image1}}');"></div>
+                    <div class="profile__infos">
+                    <h3 class="profile__name">{{ user.firstname}}<h3 class="profile__age">{{ user.age}}</h3></h3>
+                    <h5 class="profile__description">{{ user.bio}}</h5>
+                    </div>
+                </div>
+        {% endfor %}
         </div>
-      </div>
-      <div class="profile">
-        <div class="profile__image" style="background-image: url('http://localhost/images/woman4.jpg');"></div>
-        <div class="profile__infos">
-          <div class="profile__name">Célica<span class="profile__age">20</span></div>
-          <div class="profile__description">Tu me dois un voyage dans une galerie d’art, j’adore visiter ce genre de choses.</div>
-        </div>
-      </div>
-      <div class="profile">
-        <div class="profile__image" style="background-image: url('http://localhost/images/woman3.jpg');"></div>
-        <div class="profile__infos">
-          <div class="profile__name">Natasha<span class="profile__age">20</span></div>
-          <div class="profile__description">Si y a match, c'est toi qui commence ! 😉</div>
-        </div>
-      </div>
-      <div class="profile">
-        <div class="profile__image" style="background-image: url('http://localhost/images/woman2.jpg');"></div>
-        <div class="profile__infos">
-          <div class="profile__name">Paola <span class="profile__age">19</span></div>
-          <div class="profile__description">Plûtot chien ou chat ?</div>
-        </div>
-      </div>
-      <div class="profile">
-        <div class="profile__image" style="background-image: url('http://localhost/images/woman1.jpg');"></div>
-        <div class="profile__infos">
-          <div class="profile__name">Emiliana <span class="profile__age">22</span></div>
-          <div class="profile__description">Pour les pandas roux !</div>
-        </div>
-      </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="bottombar">
       <div class="bottombar__button">
         <img src="images/icon-next.svg">
