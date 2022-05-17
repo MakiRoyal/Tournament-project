@@ -19,4 +19,19 @@ class ArticleModel extends Model
     }
 
 
+
+    public function createArticle(string $title, string $image, string $place, string $date, string $bio) 
+    {
+
+        $statement = $this->pdo->prepare('INSERT INTO `article` (`title`, `image`, `place`, `date`, `bio`) VALUES (:title, :image, :place, :date, :bio)');
+
+        $statement->execute([
+            'title' => $title,
+            'image' => $image,
+            'place' => $place,
+            'date' => $date,
+            'bio' => $bio,
+        ]);
+    }
+
 }

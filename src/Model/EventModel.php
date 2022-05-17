@@ -11,11 +11,26 @@ class EventModel extends Model
 
     public function EventList() {
 
-        $statement = $this->pdo->prepare('SELECT * FROM `events`');
+        $statement = $this->pdo->prepare('SELECT * FROM `events` ORDER BY id desc');
 
         $statement->execute();
 
         return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+    public function createEvent(string $nom, string $image, string $description, string $date, string $place) 
+    {
+
+        $statement = $this->pdo->prepare('INSERT INTO `events` (`nom`, `image`, `description`, `date`, `place`) VALUES (:nom, :image, :description, :date, :place)');
+
+        $statement->execute([
+            'nom' => $nom,
+            'image' => $image,
+            'description' => $description,
+            'date' => $date,
+            'place'=> $place,
+        ]);
     }
 
 

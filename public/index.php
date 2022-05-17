@@ -41,6 +41,28 @@ $router->before('GET', '/event', function() {
     }
 });
 
+
+$router->before('GET', '/createEvent', function() {
+    if ($_SESSION['user']['role'] != 'admin') {
+        header('location: /login');
+        exit();
+    }
+});
+
+$router->before('GET', '/createArticle', function() {
+    if ($_SESSION['user']['role'] != 'admin') {
+        header('location: /login');
+        exit();
+    }
+});
+
+$router->before('GET', '/admin', function() {
+    if ($_SESSION['user']['role'] != 'admin') {
+        header('location: /login');
+        exit();
+    }
+});
+
 $router->get('/deconnection', function() {
     session_destroy();
     header('location: /login');
@@ -58,7 +80,6 @@ $router->post('/inscription', 'Mvc\Controller\UserController@createUser');
 
 $router->get('/', 'Mvc\Controller\UserController@ListUsers');
 
-
 $router->get('/profil', 'Mvc\Controller\AccueilController@displayProfil');
 $router->post('/profil', 'Mvc\Controller\UserController@updateProfil');
 
@@ -68,6 +89,14 @@ $router->post('/abonnement', 'Mvc\Controller\UserController@subscription');
 $router->get('/event', 'Mvc\Controller\EventController@ListEvent');
 
 $router->get('/article', 'Mvc\Controller\ArticleController@ArticleList');
+
+$router->get('/createEvent', 'Mvc\Controller\AccueilController@displayCreateEvent');
+$router->post('/createEvent', 'Mvc\Controller\EventController@createEvent');
+
+$router->get('/createArticle', 'Mvc\Controller\AccueilController@displayCreateArticle');
+$router->post('/createArticle', 'Mvc\Controller\ArticleController@createArticle');
+
+$router->get('/admin', 'Mvc\Controller\AccueilController@displayAdmin');
 
 
 $router->run();

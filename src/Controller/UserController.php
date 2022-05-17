@@ -37,7 +37,6 @@ class UserController extends Controller
             if (isset($_POST['password']) && isset($account['password']) && password_verify($_POST['password'], $account['password'])) {
 
                 $_SESSION['user'] = [
-                    'id' => $account['id'],
                     'lastname' => $account['lastname'],
                     'firstname' => $account['firstname'],
                     'mail' => $account['mail'],
@@ -55,6 +54,7 @@ class UserController extends Controller
                     'subscription' => $account['subscription'],
                     'work' => $account['work'],
                     'bio' => $account['bio'],
+                    'role' => $account['role']
                 ];
                 header('Location: /');
                 exit();

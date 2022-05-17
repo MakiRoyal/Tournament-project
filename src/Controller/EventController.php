@@ -20,4 +20,19 @@ class EventController extends Controller
         echo $this->twig->render('event.html.twig', ['events' => $events]);
     }
 
+    public function createEvent()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $from = $_FILES['image']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image']['name'];
+            if (move_uploaded_file($from, $to))
+            {
+                $this->eventModel->createEvent($_POST['nom'], $_FILES['image']['name'], $_POST['description'], $_POST['date'], $_POST['place']);
+            }
+            header('location: /');
+            exit();
+        }
+        echo $this->twig->render('createEvent.html.twig');
+    }
+
 }
