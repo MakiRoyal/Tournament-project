@@ -30,5 +30,11 @@ class AccueilController extends Controller
         // var_dump($_SESSION);
         echo $this->twig->render('event.html.twig');
     }
+
+    public function displayArtcile()
+    {
+        // var_dump($_SESSION);
+        echo $this->twig->render('articles.html.twig');
+    }
 }
 

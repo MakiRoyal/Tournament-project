@@ -34,6 +34,13 @@ $router->before('GET', '/abonnement', function() {
     }
 });
 
+$router->before('GET', '/event', function() {
+    if (!isset($_SESSION['user'])) {
+        header('location: /login');
+        exit();
+    }
+});
+
 $router->get('/deconnection', function() {
     session_destroy();
     header('location: /login');
@@ -59,6 +66,9 @@ $router->get('/abonnement', 'Mvc\Controller\AccueilController@displaySub');
 $router->post('/abonnement', 'Mvc\Controller\UserController@subscription');
 
 $router->get('/event', 'Mvc\Controller\EventController@ListEvent');
+
+$router->get('/article', 'Mvc\Controller\ArticleController@ArticleList');
+
 
 $router->run();
 
