@@ -5,8 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="assets/style/reset.css" rel="stylesheet" type="text/css" />
     <link href="assets/style/accueil.css" rel="stylesheet" type="text/css" />
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/style/swipe.css'>
     <title>Document</title>
 </head>
 <body>
@@ -36,6 +38,56 @@
     <div class="line" ></div>
 
 
+
+      <main>
+    <div class="profiles">
+      <div class="profile">
+        <div class="profile__image" style="background-image: url('http://localhost/images/woman5.jpg');"></div>
+        <div class="profile__infos">
+          <h3 class="profile__name">Rebecca<h3 class="profile__age">20</h3></h3>
+          <h5 class="profile__description">Le mafé, le bissap, j'adore ça</h5>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile__image" style="background-image: url('http://localhost/images/woman4.jpg');"></div>
+        <div class="profile__infos">
+          <div class="profile__name">Célica<span class="profile__age">20</span></div>
+          <div class="profile__description">Tu me dois un voyage dans une galerie d’art, j’adore visiter ce genre de choses.</div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile__image" style="background-image: url('http://localhost/images/woman3.jpg');"></div>
+        <div class="profile__infos">
+          <div class="profile__name">Natasha<span class="profile__age">20</span></div>
+          <div class="profile__description">Si y a match, c'est toi qui commence ! 😉</div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile__image" style="background-image: url('http://localhost/images/woman2.jpg');"></div>
+        <div class="profile__infos">
+          <div class="profile__name">Paola <span class="profile__age">19</span></div>
+          <div class="profile__description">Plûtot chien ou chat ?</div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile__image" style="background-image: url('http://localhost/images/woman1.jpg');"></div>
+        <div class="profile__infos">
+          <div class="profile__name">Emiliana <span class="profile__age">22</span></div>
+          <div class="profile__description">Pour les pandas roux !</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottombar">
+      <div class="bottombar__button">
+        <img src="images/icon-next.svg">
+      </div>
+      <div class="bottombar__button">
+        <img src="images/icon-heart.svg">
+      </div>
+    </div>
+  </main>
+  <script src='js/hammer.min.js'></script>
+  <script src='js/main.js'></script>
     {% block content %}{% endblock %}
 
 </body>
