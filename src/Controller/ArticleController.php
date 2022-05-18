@@ -21,19 +21,35 @@ class ArticleController extends Controller
     }
 
 
+    public function listArticle() {
+        $articles = $this->articleModel->ArticleList();
+        echo $this->twig->render('createArticle.html.twig', ['articles' => $articles]);
+    }
+
+
     public function createArticle()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        if (isset($_POST)){
             $from = $_FILES['image']['tmp_name'];
             $to = __DIR__ . '/../../public/images/' . $_FILES['image']['name'];
             if (move_uploaded_file($from, $to))
             {
                 $this->articleModel->createArticle($_POST['title'], $_FILES['image']['name'], $_POST['place'], $_POST['date'], $_POST['bio']);
             }
-            header('location: /');
+            header('location: /admin/createArticle');
             exit();
         }
         echo $this->twig->render('createArticle.html.twig');
     }
 
+    public function deleteArticle(){
+        if(isset($_POST)){
+            $this->articleModel->deleteArticle(key($_POST));
+            header('location: /admin/createArticle');
+            exit();
+        }
+    }
+
+
+    
 }

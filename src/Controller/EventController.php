@@ -20,6 +20,13 @@ class EventController extends Controller
         echo $this->twig->render('event.html.twig', ['events' => $events]);
     }
 
+    public function EventList() {
+        $events = $this->eventModel->EventList();
+        echo $this->twig->render('createEvent.html.twig', ['events' => $events]);
+    }
+
+
+
     public function createEvent()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -29,10 +36,22 @@ class EventController extends Controller
             {
                 $this->eventModel->createEvent($_POST['nom'], $_FILES['image']['name'], $_POST['description'], $_POST['date'], $_POST['place']);
             }
-            header('location: /');
+            var_dump($_POST);
+            header('location: /admin/createEvent');
             exit();
         }
         echo $this->twig->render('createEvent.html.twig');
     }
+
+
+
+    public function deleteEvent(){
+        if(isset($_POST)){
+            $this->eventModel->deleteEvent(key($_POST));
+            header('location: /admin/createEvent');
+            exit();
+        }
+    }
+
 
 }

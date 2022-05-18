@@ -58,6 +58,9 @@ class UserModel extends Model
         ]);
     }
 
+
+    
+
     public function updateProfil(string $firstname, string $lastname, string $age, string $city, string $mail, string $password, string $gender, string $militantCause, string $image1, string $image2, string $image3, string $image4, string $image5, string $image6,  string $work, string $bio, string $mailUpdate) 
     {
         $statement = $this->pdo->prepare('UPDATE `user` SET `firstname` = :firstname,  `lastname` = :lastname, `age` = :age, `city` = :city, `mail` = :mail, `password` = :password, `gender` = :gender, `militantCause` = :militantCause, `image1` = :image1, `image2` = :image2, `image3` = :image3, `image4` = :image4, `image5` = :image5, `image6` = :image6, `work` = :work, `bio` = :bio  where mail = :mailUpdate');

@@ -112,6 +112,7 @@ class UserController extends Controller
                 'subscription' => $_SESSION['user']['subscription'],
                 'work' => $_POST['work'],
                 'bio' => $_POST['bio'],
+                'role' => $_SESSION['user']['role'],
             ];
             
             header('location: /');

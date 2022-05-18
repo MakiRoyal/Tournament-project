@@ -15,7 +15,7 @@
 
 
     <h1>Hello</h1>
-
+    <a href="/admin">Admin</a>
 
 
 
@@ -27,6 +27,35 @@
         <input type="file" name="image" accept="image/*">
         <input type="submit" name="createEvent" value="Event">
     </form>
+
+
+
+   <table>
+            <tr>
+                <td>Title</td>
+                <td>Bio</td>
+                <td>Date</td>
+                <td>Place</td>
+                <td>Image</td>
+                <td>DeleteButton</td>
+            </tr>
+        {% for event in events %}
+            <tr>
+                <td>{{ event.nom }}</td>
+                <td>{{ event.description }}</td>
+                <td>{{ event.date }}</td>
+                <td>{{ event.place }}</td>
+                <td><img src="http://localhost/images/{{ event.image }}" style="height: 100px"></td>
+                <td>  
+                    <form method="POST" action="/admin/createEvent/deleteEvent">
+                        <input type="submit" name="{{event.id}}" value="Delete">
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
 
 </body>
 </html>

@@ -15,11 +15,11 @@
 
 
     <h1>Hello {{ session.user.firstname }}</h1>
+    <a href="/admin">Admin</a>
 
 
 
-
-    <form method="post" action="" enctype='multipart/form-data'>
+    <form method="post" action="/admin/createArticle" enctype='multipart/form-data'>
         <input type="text" name="title" placeholder="Insert title">
         <textarea name="bio" placeholder="Insert Bio"></textarea>
         <input type="text" name="date" placeholder="Insert Date">
@@ -27,6 +27,36 @@
         <input type="file" name="image" accept="image/*">
         <input type="submit" name="createEvent" value="Article">
     </form>
+
+
+
+
+    <table>
+            <tr>
+                <td>Title</td>
+                <td>Bio</td>
+                <td>Date</td>
+                <td>Place</td>
+                <td>Image</td>
+                <td>DeleteButton</td>
+            </tr>
+        {% for article in articles %}
+            <tr>
+                <td>{{ article.title }}</td>
+                <td>{{ article.bio }}</td>
+                <td>{{ article.date }}</td>
+                <td>{{ article.place }}</td>
+                <td><img src="http://localhost/images/{{ article.image }}" style="height: 100px"></td>
+                <td>  
+                    <form method="POST" action="/admin/createArticle/deleteArticle  ">
+                        <input type="submit" name="{{article.id}}" value="Delete">
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
 
 </body>
 </html>

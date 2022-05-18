@@ -34,4 +34,20 @@ class EventModel extends Model
     }
 
 
+
+
+    public function deleteEvent($id) 
+    {
+
+        $statement = $this->pdo->prepare('DELETE FROM `events` WHERE `id` = :id');
+
+        $statement->execute([
+            'id' => $id,
+        ]);
+        return $statement->fetch(PDO::FETCH_ASSOC);
+    }
+
+
+    
+
 }

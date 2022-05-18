@@ -34,4 +34,16 @@ class ArticleModel extends Model
         ]);
     }
 
+
+    public function deleteArticle($id) 
+    {
+
+        $statement = $this->pdo->prepare('DELETE FROM `article` WHERE `id` = :id');
+
+        $statement->execute([
+            'id' => $id,
+        ]);
+        return $statement->fetch(PDO::FETCH_ASSOC);
+    }
+
 }
