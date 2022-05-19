@@ -12,11 +12,13 @@
     <title>Document</title>
 </head>
 <body>
-    <header>    
+   {% block header %}
+       <header>    
         <div>
-            <img src="http://localhost/images/{{session.user.image1}}" alt="{{session.user.image1}}">
             <input type="checkbox" id="burger-checkbox">
-            <label for="burger-checkbox">{{session.user.firstname}}.{{session.user.lastname}}</label>
+            <label for="burger-checkbox">
+              <img src="http://localhost/images/{{session.user.image1}}" alt="{{session.user.image1}}">
+            </label>
             <div class="menu-wrapper">
                 <nav>
                     <ul>
@@ -36,6 +38,7 @@
        <button>Messages</button> 
     </header>
     <div class="line" ></div>
+   {% endblock %}
 
 
 

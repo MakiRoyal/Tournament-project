@@ -20,11 +20,12 @@ header div{
     gap: 10px;
     border: 1px solid black;
     border-radius: 5px;
-    width: 200px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 header div img{
-    width: 20%;
-    padding: 5px 10px 5px 10px;
+    width: 80px;
+    padding: 10px 15px 10px 15px;   
 }
 #burger-checkbox{
     display: none;
@@ -52,6 +53,7 @@ header button{
     font-size: 20px;
     border-radius: 20px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .line{
     background: linear-gradient(to left, #d3075f, #009fe3);
@@ -61,7 +63,7 @@ header button{
 
 .menu-wrapper {
     position: fixed;
-    bottom: -138px;
+    bottom: -124px;
     left: -100%;
     height: 100%;
     display: flex;

@@ -11,31 +11,11 @@
     <title>Document</title>
 </head>
 <body>
-    <header>    
-        <div>
-            <img src="http://localhost/images/{{session.user.image1}}" alt="{{session.user.image1}}">
-            <input type="checkbox" id="burger-checkbox">
-            <label for="burger-checkbox">{{session.user.firstname}}.{{session.user.lastname}}</label>
-            <div class="menu-wrapper">
-                <nav>
-                    <ul>
-                        <li><a href="/">Accueil</a></li>
-                        <li><a href="/profil">Mon Profil</a></li>
-                        <li><a href="/article">Mes Articles</a></li>
-                        <li><a href="/abonnement">Pass Premium</a></li>
-                        <li><a href="/event">Evenement</a></li>
-                        <li><div></div></li>
-                        <li><a href="#">Reglage</a></li>
-                        <li><a href="/deconnection">Déconnexion</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-       <img alt="Logo MiiLove" src="https://media.discordapp.net/attachments/951121617642205184/966374494497280000/unknown.png">
-       <button>Messages</button> 
-    </header>
-    <div class="line" ></div>
 
+    {% extends "accueil.html.twig" %}
+    {% block header %}  
+        
+    {% endblock %}
     <h2>Votre abonnement actuelle : {{session.user.subscription}}</h2>
     <section id="sub">
         <form method="POST" action="">
