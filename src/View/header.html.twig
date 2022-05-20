@@ -1,0 +1,28 @@
+       {% block header %}
+       <header>    
+        <div>
+            <input type="checkbox" id="burger-checkbox">
+            <label for="burger-checkbox">
+              <img class="imgProfil" src="http://localhost/images/{{session.user.image1}}" alt="{{session.user.image1}}">
+            </label>
+            <div class="menu-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="/profil">Mon Profil</a></li>
+                        <li><a href="/article">Mes Articles</a></li>
+                        <li><a href="/abonnement">Pass Premium</a></li>
+                        <li><a href="/event">Evenement</a></li>
+                        <li><div></div></li>
+                        <li><a href="#">Reglage</a></li>
+                        <li><a href="/deconnection">Déconnexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+       <img alt="Logo MiiLove" src="https://media.discordapp.net/attachments/951121617642205184/966374494497280000/unknown.png" class="miilove">
+       <button>Messages</button> 
+    </header>
+      <div class="line" ></div>
+    {% endblock %}
+
