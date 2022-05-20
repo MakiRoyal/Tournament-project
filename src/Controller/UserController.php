@@ -20,11 +20,31 @@ class UserController extends Controller
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             $from = $_FILES['image']['tmp_name'];
             $to = __DIR__ . '/../../public/images/' . $_FILES['image']['name'];
-            if (move_uploaded_file($from, $to))
-            {
-                $this->userModel->createUser($_POST['firstname'], $_POST['lastname'], $_POST['age'], $_POST['city'], $_POST['mail'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['gender'], $_POST["causes"], $_FILES['image']['name'], $_FILES['image2']['name'], $_FILES['image3']['name'], $_FILES['image4']['name'], $_FILES['image5']['name'], $_FILES['image6']['name']);
-            }
+            move_uploaded_file($from, $to);
 
+            $from = $_FILES['image2']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image2']['name'];
+            move_uploaded_file($from, $to);
+
+            $from = $_FILES['image3']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image3']['name'];
+            move_uploaded_file($from, $to);
+
+            $from = $_FILES['image4']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image4']['name'];
+            move_uploaded_file($from, $to);
+            
+            $from = $_FILES['image5']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image5']['name'];
+            move_uploaded_file($from, $to);
+
+            $from = $_FILES['image6']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image6']['name'];
+            move_uploaded_file($from, $to);
+            
+
+
+                $this->userModel->createUser($_POST['firstname'], $_POST['lastname'], $_POST['age'], $_POST['city'], $_POST['mail'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['gender'], $_POST["causes"], $_FILES['image']['name'], $_FILES['image2']['name'], $_FILES['image3']['name'], $_FILES['image4']['name'], $_FILES['image5']['name'], $_FILES['image6']['name']);
             header('location: /');
             exit();
         }
@@ -66,7 +86,6 @@ class UserController extends Controller
 
     public function subscription()
     {
-        var_dump($_POST);
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             $this->userModel->Subscription($_POST['sub']);
             $_SESSION['user']['subscription'] = $_POST['sub'];
@@ -80,15 +99,32 @@ class UserController extends Controller
 
     public function updateProfil()
     {
-        var_dump($_SESSION);
         $account = $this->userModel->loginIn($_SESSION['user']['mail']);
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             $from = $_FILES['image']['tmp_name'];
             $to = __DIR__ . '/../../public/images/' . $_FILES['image']['name'];
+            move_uploaded_file($from, $to);
 
-            if(strlen($_FILES['image']['name']) === 0){
-                $_Files['image']['name'] = $_SESSION['user']['image1'];
-            }
+            $from = $_FILES['image2']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image2']['name'];
+            move_uploaded_file($from, $to);
+
+            $from = $_FILES['image3']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image3']['name'];
+            move_uploaded_file($from, $to);
+
+            $from = $_FILES['image4']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image4']['name'];
+            move_uploaded_file($from, $to);
+            
+            $from = $_FILES['image5']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image5']['name'];
+            move_uploaded_file($from, $to);
+
+            $from = $_FILES['image6']['tmp_name'];
+            $to = __DIR__ . '/../../public/images/' . $_FILES['image6']['name'];
+            move_uploaded_file($from, $to);
+
 
 
 

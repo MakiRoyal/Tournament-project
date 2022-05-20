@@ -1,3 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&family=Montserrat:wght@300;400;600;700&family=Roboto&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+a, h1, h2, h3, h4, h5, h6, p, label, span{
+    font-family: Montserrat ;
+}
+
+
+
 header{
     display: flex;
     flex-direction: row;
@@ -30,9 +42,11 @@ header div label {
 }
 .imgProfil {
     width: 60px;
+    object-fit: cover;
 }
 .miilove{
     width: 150px;
+
     
 }
 header button{
@@ -53,20 +67,11 @@ header button{
     height: 15px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&family=Montserrat:wght@300;400;600;700&family=Roboto&display=swap');
-
-::-webkit-scrollbar {
-    display: none;
-}
-a, h1, h2, h3, h4, h5, h6, p, label, span{
-    font-family: Montserrat ;
-}
-
 
 
 .menu-wrapper {
     position: fixed;
-    bottom: -124px;
+    bottom: -135px;
     left: -100%;
     height: 100%;
     display: flex;

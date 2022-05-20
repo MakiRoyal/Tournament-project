@@ -129,7 +129,7 @@
   }
   
   .profile--matching::after, .profile--nexting::after {
-    content:'BOULOT';
+    content:'LIKE';
     font-weight: bold;
     font-size:28px;
     padding:8px 12px;
@@ -144,7 +144,7 @@
   } 
   
   .profile--nexting::after {
-    content:'FLOP';
+    content:'NEXT';
     border:solid 2px var(--red);
     color:var(--red);
   }
