@@ -69,10 +69,11 @@
              Swal.fire({
                 title: '<h1 style="color : black; font-size : 30px ">Connection</h1>',
                 html:
-                    '<form method="POST"><input type="text" name="mail"> <input type="text" name="password"><input type="submit" value="Connect"></form> ',
+                    '<form method="POST"><input type="text" name="mail" class="input" placeholder="Mail"> <input type="text" placeholder="Password" name="password" class="input"><input type="submit" value="Connect" class="connexion"></form> ',
                 showCloseButton: true,
                 showCancelButton: false,
-                focusConfirm: false,
+                focusConfirm: false,           
+                showConfirmButton: false,   
             }) 
         })
 

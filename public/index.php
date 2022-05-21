@@ -98,7 +98,7 @@ $router->get('/admin/createArticle', 'Mvc\Controller\ArticleController@listArtic
 $router->post('/admin/createArticle/deleteArticle', 'Mvc\Controller\ArticleController@deleteArticle');
 $router->post('/admin/createArticle', 'Mvc\Controller\ArticleController@createArticle');
 
-
+$router->get('/reglage', 'Mvc\Controller\AccueilController@displayReglage');
 
 $router->get('/admin', 'Mvc\Controller\AccueilController@displayAdmin');
 

@@ -44,9 +44,13 @@ article{
   box-shadow: 0 0px 2px #000000;
   overflow: hidden;
   position: relative;
+  
 }
 article h3{
-    bottom: 50px;
+    color: white;
+    font-weight: 600;
+    padding-bottom: 10px;
+    font-size: 20px;
 }
 .discover{
     display: flex;

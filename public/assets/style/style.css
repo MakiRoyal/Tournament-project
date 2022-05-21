@@ -80,8 +80,48 @@ article a{
 }
 
 
-
-
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+form .input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px ;
+}
+form .connexion {
+    border: none;
+    background: linear-gradient(to left, #d3075f, #009fe3);
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+}
+form .connexion:hover{
+    animation: color 0.5s ease;
+}
+@keyframes color {
+    0% {    background: linear-gradient(0deg, #d3075f, #009fe3);}
+    6% {    background: linear-gradient(20deg, #d3075f, #009fe3);}
+    12% {    background: linear-gradient(45deg, #d3075f, #009fe3);}
+    18% {    background: linear-gradient(70deg, #d3075f, #009fe3);}
+    25% {    background: linear-gradient(90deg, #d3075f, #009fe3);}
+    31% {    background: linear-gradient(105deg, #d3075f, #009fe3);}
+    38% {    background: linear-gradient(135deg, #d3075f, #009fe3);}
+    45% {    background: linear-gradient(165deg, #d3075f, #009fe3);}
+    50% {    background: linear-gradient(180deg, #d3075f, #009fe3);}
+    56% {    background: linear-gradient(200deg, #d3075f, #009fe3);}
+    63% {    background: linear-gradient(225deg, #d3075f, #009fe3);}
+    69% {    background: linear-gradient(250deg, #d3075f, #009fe3);}
+    75% {    background: linear-gradient(270deg, #d3075f, #009fe3);}
+    80% {    background: linear-gradient(290deg, #d3075f, #009fe3);}
+    88% {    background: linear-gradient(315deg, #d3075f, #009fe3);}
+    95% {    background: linear-gradient(330deg, #d3075f, #009fe3);}
+    100% {    background: linear-gradient(360deg, #d3075f, #009fe3);}
+}
 
 
 
