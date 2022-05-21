@@ -46,8 +46,10 @@ header div label {
 }
 .miilove{
     width: 150px;
-
     
+}
+a{
+    text-decoration: none;
 }
 header button{
     align-self: flex-end;

@@ -7,17 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="assets/style/reset.css" rel="stylesheet" type="text/css" />
-    <link rel='stylesheet' type='text/css' media='screen' href='assets/style/swipe.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/style/admin.css'>
+     <link rel='stylesheet' type='text/css' media='screen' href='assets/style/header.css'>
     <title>Document</title>
 </head>
 <body>
 
+    {% include "header.html.twig"%}
+    <h1>Hello {{ session.user.firstname }} !</h1>
 
-    <h1>Hello {{ session.user.firstname }}</h1>
-
-    <a href="/">Accueil</a>
-    <a href="/admin/createEvent">Create Event</a>
-    <a href="/admin/createArticle">Create Article</a>
+    <div>
+        <a href="/admin/createEvent" class="link">Create Event</a>
+        <a href="/admin/createArticle" class="link">Create Article</a>
+    </div>
 
 </body>
 </html>
