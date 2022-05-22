@@ -1,0 +1,60 @@
+
+#profil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100vw;
+    border-bottom: 1px solid black;
+    padding: 20px 0px 20px 0px;
+}
+#profil canvas {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+#profil div h3 {
+    font-weight: 600;
+    font-size: 20px;
+}
+#profil div h3 span{
+    font-weight: 500;
+}
+
+
+#chat {
+    margin: 50px;
+    display: flex;
+    align-items: center;
+}
+#chat h6{
+    padding: 8px 20px 8px 20px;
+    background-color: #009FE3;
+    color: white;
+    border-radius: 20px;
+}
+
+#bar{
+    background-color: #F1F1F1;
+    position: fixed;
+    top: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 300px 20px 50px;
+    z-index: 10;
+}
+#bar input{
+     width: 60vw;
+     padding: 5px 15px 5px 15px;
+     border: 1px solid black;
+     border-radius: 20px;
+}
+#bar h5{
+    font-weight: 600;
+    font-size: 20px;
+}

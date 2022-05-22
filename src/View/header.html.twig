@@ -1,10 +1,8 @@
        {% block header %}
        <header>    
-        <div>
+        <div class="div">
             <input type="checkbox" id="burger-checkbox">
-            <label for="burger-checkbox">
-              <img class="imgProfil" src="http://localhost/images/{{session.user.image1}}" alt="{{session.user.image1}}">
-            </label>
+            <label for="burger-checkbox" class="menu-label" style="background-image: url('http://localhost/images/{{session.user.image1}}');background-size:cover;"></label>
             <div class="menu-wrapper">
                 <nav>
                     <ul>
@@ -25,8 +23,25 @@
         </div>
        <a href="/">
         <img alt="Logo MiiLove" src="https://media.discordapp.net/attachments/951121617642205184/966374494497280000/unknown.png" class="miilove">
-       </a>
-       <button>Messages</button> 
+      </a>
+      <div>
+        <input type="checkbox" id="message-checkbox" >
+        <label for="message-checkbox" class="message-label"> Message</label>
+        <div class="message-menu">
+                  <nav>
+                      <ul>
+                          {% for user in users %}
+                            <li>
+                              <a href="{{ user.id}}">
+                                <img src="http://localhost/images/{{user.image1}}">
+                                <h4>{{ user.firstname }}</h4>
+                              </a>
+                            </li>
+                          {% endfor %}
+                      </ul>
+                  </nav>
+          </div>
+      </div>
     </header>
       <div class="line" ></div>
     {% endblock %}

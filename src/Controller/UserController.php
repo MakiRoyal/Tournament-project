@@ -164,6 +164,24 @@ class UserController extends Controller
         $users = $this->userModel->findAll();
         echo $this->twig->render('accueil.html.twig', ['users' => $users]);
     }
+    
+    public function usersList() {
+        $users = $this->userModel->findAll();
+        echo $this->twig->render('header.html.twig', ['user' => $users]);
+    }
+
+
+    public function findOneUser(int $id) {
+        $user = $this->userModel->findOneUser($id);
+        if (empty($user))
+        {
+            header('Location: /');
+            exit();
+        }
+        echo $this->twig->render('user.html.twig', [
+            'user' => $user
+        ]);
+    }
 
 
 }

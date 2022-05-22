@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&family=Montserrat:wght@300;400;600;700&family=Roboto&display=swap');
 
-::-webkit-scrollbar {
-    display: none;
-}
 a, h1, h2, h3, h4, h5, h6, p, label{
     font-family: Montserrat ;
 }

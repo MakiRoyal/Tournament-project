@@ -1,9 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&family=Montserrat:wght@300;400;600;700&family=Roboto&display=swap');
 
-::-webkit-scrollbar {
-    display: none;
-}
 a, h1, h2, h3, h4, h5, h6, p, label, span, tr, th ,td{
     font-family: Montserrat ;
 }
@@ -17,20 +14,20 @@ header{
     align-items: center;
     margin: 20px 50px 20px 50px;
 }
-header div{
+header .div{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
     object-fit: contain;
-    border-radius: 50%;
     align-items: center;
 }
 #burger-checkbox{
     display: none;
 }
-header div label {
+#message-checkbox{
+    display: none;
+}
+header div .menu-label {
     position: relative;
     display: block;
     cursor: pointer;
@@ -39,10 +36,10 @@ header div label {
     text-transform: uppercase;
     align-self: center;   
     padding: 10px 15px 10px 15px;
-}
-.imgProfil {
-    width: 60px;
-    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
 }
 .miilove{
     width: 150px;
@@ -51,7 +48,7 @@ header div label {
 a{
     text-decoration: none;
 }
-header button{
+header .message-label{
     align-self: flex-end;
     padding: 10px 20px 10px 20px;
     border: none;
@@ -61,7 +58,6 @@ header button{
     font-size: 20px;
     border-radius: 20px;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 .line{
     background: linear-gradient(to left, #d3075f, #009fe3);
@@ -73,15 +69,16 @@ header button{
 
 .menu-wrapper {
     position: fixed;
-    bottom: -135px;
-    left: -100%;
+    bottom: -140px;
+    left: 0px;
+    opacity: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
     border: none;
     z-index: 50;
 }
@@ -107,7 +104,7 @@ header button{
     color: black;
 }
 #burger-checkbox:checked ~ .menu-wrapper {
-    left: 0;
+    opacity: 1;
 }
 
 .admin{
@@ -116,4 +113,47 @@ header button{
     color: white;
     border-radius: 10px;
     margin-top: 20px;
+}
+
+
+.message-menu{
+    position: fixed;
+    opacity: 0;
+    bottom: -140px;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    transition: all .5s ease-in-out;
+    border: none;
+    z-index: 50;   
+}
+#message-checkbox:checked ~ .message-menu {
+    opacity: 1;
+}
+.message-menu nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.message-menu nav ul li{
+    width: 200px;
+    border: 1px solid grey;
+    padding: 20px 20px 20px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: white;
+}
+.message-menu nav ul li a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.message-menu nav ul li a img{
+    width: 80px;
 }

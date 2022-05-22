@@ -101,4 +101,21 @@ class UserModel extends Model
     }
 
 
+
+    public function findOneUser(int $id)
+    {
+        $statement = $this->pdo->prepare('SELECT * FROM user WHERE id = :id ');
+        $statement->execute([
+            'id' => $id,
+        ]);
+
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+
+        if (!empty($user))
+        {
+            return $user;
+        }
+
+        return null;
+    }
 }

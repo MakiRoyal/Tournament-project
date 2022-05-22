@@ -102,6 +102,10 @@ $router->get('/reglage', 'Mvc\Controller\AccueilController@displayReglage');
 
 $router->get('/admin', 'Mvc\Controller\AccueilController@displayAdmin');
 
+$router->get('/header', 'Mvc\Controller\userController@usersList');
+
+$router->get('(\d+)', 'Mvc\Controller\userController@findOneUser');
+
 
 $router->run();
 
