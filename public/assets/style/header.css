@@ -153,7 +153,11 @@ header .message-label{
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 10px;
 }
-.message-menu nav ul li a img{
+.message-menu nav ul li a canvas{
     width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border:  1px solid black;
 }

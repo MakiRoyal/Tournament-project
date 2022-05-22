@@ -21,7 +21,7 @@
                 <a href="">Télécharger</a>
             </nav>
             <nav>
-                <a href="" class="french">Francais</a>
+                <a href="" class="french">Français</a>
                 <a class="buttonConnexion" >Connexion</a>
             </nav>
         </div>
@@ -39,24 +39,28 @@
 
     <footer>
         <div>
-            <h5>Mention légale</h5>
+            <h5>Mentions légales</h5>
             <h6>Confidentialité</h6>
             <h6>Conditions d'utilisation</h6>
             <h6>Politique relative aux cookies</h6>
             <h6>Propriété intellectuelle</h6>
         </div>
         <div>
-            <h5>Emploie</h5>
-            <h6>Espace emploie</h6>
+            <h5>Emploi</h5>
+            <h6>Espace emploi</h6>
             <h6>Blog technique</h6>
         </div>
         <div>
-            <h5>réseaux sociaux</h5>
+            <h5>Réseaux sociaux</h5>
+            <h6>Facebook</h6>
+            <h6>Twitter</h6>
+            <h6>Instagram</h6>
+            <h6>YouTube</h6>
         </div>
         <div>
             <h5>FAQ</h5>
-            <h6>Mets destinations</h6>
-            <h6>Esapce presse</h6>
+            <h6>Mes destinations</h6>
+            <h6>Espace presse</h6>
             <h6>Contact</h6>
             <h6>Code promotionnel</h6>
         </div>
@@ -67,9 +71,9 @@
         let buttonConnexion = document.querySelector(".buttonConnexion")
         buttonConnexion.addEventListener("click" ,function(){
              Swal.fire({
-                title: '<h1 style="color : black; font-size : 30px ">Connection</h1>',
+                title: '<h1 style="color : black; font-size : 30px ">Connexion</h1>',
                 html:
-                    '<form method="POST"><input type="text" name="mail" class="input" placeholder="Mail"> <input type="text" placeholder="Password" name="password" class="input"><input type="submit" value="Connect" class="connexion"></form> ',
+                    '<form method="POST"><input type="text" name="mail" class="input" placeholder="Email de connexion"> <input type="text" placeholder="Mot de passe" name="password" class="input"><input type="submit" value="Se connecter" class="connexion"></form> ',
                 showCloseButton: true,
                 showCancelButton: false,
                 focusConfirm: false,           

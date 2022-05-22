@@ -10,12 +10,12 @@
                         <li><a href="/profil">Mon Profil</a></li>
                         <li><a href="/article">Mes Articles</a></li>
                         <li><a href="/abonnement">Pass Premium</a></li>
-                        <li><a href="/event">Evenement</a></li>
+                        <li><a href="/event">Évènements</a></li>
                         {% if( session.user.role == 'admin')%}
                           <li><a href="/admin">Admin</a></li>
                         {% endif %}
                         <li><div></div></li>
-                        <li><a href="/reglage">Reglage</a></li>
+                        <li><a href="/reglage">Réglages</a></li>
                         <li><a href="/deconnection">Déconnexion</a></li>
                     </ul>
                 </nav>
@@ -32,8 +32,8 @@
                       <ul>
                           {% for user in users %}
                             <li>
-                              <a href="{{ user.id}}">
-                                <img src="http://localhost/images/{{user.image1}}">
+                              <a href="{{ user.id}}" >
+                                <canvas style="background-image: url('http://localhost/images/{{user.image1}}');background-size:cover;"></canvas>
                                 <h4>{{ user.firstname }}</h4>
                               </a>
                             </li>
