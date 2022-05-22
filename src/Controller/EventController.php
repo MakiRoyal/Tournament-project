@@ -29,7 +29,8 @@ class EventController extends Controller
 
     public function createEvent()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && strlen($_POST['nom'] > 0) && strlen($_POST['description'] > 0) && strlen($_POST['date'] > 0) && strlen($_POST['place'] > 0) && strlen($_FILES['image']['name'] > 0)){
+        
+        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             $from = $_FILES['image']['tmp_name'];
             $to = __DIR__ . '/../../public/images/' . $_FILES['image']['name'];
             if (move_uploaded_file($from, $to))
