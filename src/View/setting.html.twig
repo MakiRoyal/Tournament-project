@@ -6,38 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="assets/style/reset.css" rel="stylesheet" type="text/css" />
-    <link href="assets/style/accueil.css" rel="stylesheet" type="text/css" />
+    <link href="assets/style/header.css" rel="stylesheet" type="text/css" />
     <link href="assets/style/setting.css" rel="stylesheet" type="text/css" />
     <title>Réglages</title>
 </head>
 <body>
-    {% block header %}
-       <header>    
-        <div>
-            <input type="checkbox" id="burger-checkbox">
-            <label for="burger-checkbox">
-              <img src="http://localhost/images/{{session.user.image1}}" alt="{{session.user.image1}}">
-            </label>
-            <div class="menu-wrapper">
-                <nav>
-                    <ul>
-                        <li><a href="/">Accueil</a></li>
-                        <li><a href="/profil">Mon Profil</a></li>
-                        <li><a href="/article">Mes Articles</a></li>
-                        <li><a href="/abonnement">Pass Premium</a></li>
-                        <li><a href="/event">Évènement</a></li>
-                        <li><div></div></li>
-                        <li><a href="#">Réglages</a></li>
-                        <li><a href="/deconnection">Déconnexion</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-       <img alt="Logo MiiLove" src="https://media.discordapp.net/attachments/951121617642205184/966374494497280000/unknown.png">
-       <button>Messages</button> 
-    </header>
-    <div class="line" ></div>
-   {% endblock %}
+     {% include "header.html.twig"%}
 
     <h1>Réglages du compte</h1>
     <div class="reglages">

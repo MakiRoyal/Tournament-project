@@ -41,6 +41,13 @@ $router->before('GET', '/event', function() {
     }
 });
 
+$router->before('GET', '/setting', function() {
+    if (!isset($_SESSION['user'])) {
+        header('location: /login');
+        exit();
+    }
+});
+
 
 $router->before('GET', '/createEvent', function() {
     if ($_SESSION['user']['role'] != 'admin') {
@@ -62,6 +69,9 @@ $router->before('GET', '/admin', function() {
         exit();
     }
 });
+
+
+
 
 $router->get('/deconnection', function() {
     session_destroy();
@@ -99,8 +109,6 @@ $router->post('/createEvent', 'Mvc\Controller\EventController@createEvent');
 $router->get('/createArticle', 'Mvc\Controller\ArticleController@listArticle');
 $router->post('/admin/createArticle/deleteArticle', 'Mvc\Controller\ArticleController@deleteArticle');
 $router->post('/createArticle', 'Mvc\Controller\ArticleController@createArticle');
-
-$router->get('/reglage', 'Mvc\Controller\AccueilController@displayReglage');
 
 $router->get('/admin', 'Mvc\Controller\AccueilController@displayAdmin');
 
