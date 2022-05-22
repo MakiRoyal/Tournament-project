@@ -90,6 +90,8 @@ $router->get('/event', 'Mvc\Controller\EventController@ListEvent');
 
 $router->get('/article', 'Mvc\Controller\ArticleController@ArticleList');
 
+$router->get('/setting', 'Mvc\Controller\AccueilController@displaySetting');
+
 $router->get('/createEvent', 'Mvc\Controller\EventController@EventList');
 $router->post('/admin/createEvent/deleteEvent', 'Mvc\Controller\EventController@deleteEvent');
 $router->post('/createEvent', 'Mvc\Controller\EventController@createEvent');
