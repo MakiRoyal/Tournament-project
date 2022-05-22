@@ -34,6 +34,9 @@ input{
     gap: 20px;
     padding: 20px 0px;
 }
+.js{
+    display: none;
+}
 article{
   height: 200px;
   width: 150px;
@@ -45,6 +48,16 @@ article{
   overflow: hidden;
   position: relative;
   
+}
+h5{
+    color: black;
+    
+}
+article h4{
+    color: white;
+    font-weight: 600;
+    padding-bottom: 10px;
+    font-size: 15px;
 }
 article h3{
     color: white;

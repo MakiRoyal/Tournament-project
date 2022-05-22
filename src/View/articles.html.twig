@@ -8,6 +8,7 @@
     <link href="assets/style/reset.css" rel="stylesheet" type="text/css" />
     <link href="assets/style/header.css" rel="stylesheet" type="text/css" />
     <link href="assets/style/article.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Document</title>
 </head>
 <body>
@@ -30,8 +31,31 @@
     <section class="article" id="article">
     
     {% for article in articles %}
-        <article style="background-image: url('http://localhost/images/{{article.image}}');background-size:cover;">
-            <h3>{{ article.title}}</h3>
+        <article class="article" style="background-image: url('http://localhost/images/{{article.image}}');background-size:cover;">
+            <h4 class="title" value="{{ article.title}}">{{ article.title}}</h4>
+            <img class="img js" src="http://localhost/images/{{article.image}}" value="{{ article.image}}"> 
+            <h4 class="bio js" value="{{ article.bio}}">{{ article.bio }}</h4>
+            <h4 class="date js" value="{{ article.date}}">{{ article.date}}</h4>
+            <h4 class="place js" value="{{ article.place}}">{{ article.place}}</h4>
+            <script>
+                        let article = document.querySelector(".article")
+                        let title = document.querySelector(".title")
+                        let img = document.querySelector(".img")
+                        let bio = document.querySelector(".bio")
+                        let date = document.querySelector(".date")
+                        let place = document.querySelector(".place")
+                        article.addEventListener("click" ,function(){
+                            Swal.fire({
+                                title: '<h5>' + title.textContent + '</h5>' + '<img style="height: 400px" src="'+img.src+'">',
+                                html:
+                                    '<h5>' + date.textContent + '</h5>' + '<h5>' + bio.textContent + '</h5>' + '<h5>' + place.textContent + '</h5>',
+                                showCloseButton: true,
+                                showCancelButton: false,
+                                focusConfirm: false,           
+                                showConfirmButton: false,   
+                            }) 
+                        })
+            </script>
         </article>
 
     {% endfor %}
@@ -42,8 +66,12 @@
     <section class="discover" id="discover">
     
     {% for article in articles %}
-        <article style="background-image: url('http://localhost/images/{{article.image}}'); background-size:cover;">
-            <h3>{{ article.title}}</h3>
+        <article class="article" style="background-image: url('http://localhost/images/{{article.image}}'); background-size:cover;">
+            <h3 class="title">{{ article.title}}</h3>
+            <img class="img js" src="http://localhost/images/{{article.image}}"> 
+            <h4 class="bio js">{{ article.bio}}</h4>
+            <h4 class="date js">{{ article.date}}</h4>
+            <h4 class="place js">{{ article.place}}</h4>
         </article>
 
     {% endfor %}
@@ -52,5 +80,11 @@
 
     {% block content %}{% endblock %}
     </div>
+
+
+
+
+
+
 </body>
 </html>
