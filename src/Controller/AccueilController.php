@@ -62,5 +62,11 @@ class AccueilController extends Controller
         // var_dump($_SESSION);
         echo $this->twig->render('reglage.html.twig');
     }
+    
+    public function displaySetting()
+    {
+        // var_dump($_SESSION);
+        echo $this->twig->render('setting.html.twig');
+    }
 }
 
