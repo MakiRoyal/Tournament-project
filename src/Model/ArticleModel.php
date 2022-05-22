@@ -11,7 +11,7 @@ class ArticleModel extends Model
 
     public function ArticleList() {
 
-        $statement = $this->pdo->prepare('SELECT * FROM `article`');
+        $statement = $this->pdo->prepare('SELECT * FROM `article` ORDER BY id desc');
 
         $statement->execute();
 

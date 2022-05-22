@@ -4,7 +4,7 @@
 ::-webkit-scrollbar {
     display: none;
 }
-a, h1, h2, h3, h4, h5, h6, p, label, span{
+a, h1, h2, h3, h4, h5, h6, p, label, span, tr, th ,td{
     font-family: Montserrat ;
 }
 
@@ -110,3 +110,10 @@ header button{
     left: 0;
 }
 
+.admin{
+    padding: 10px 50px 10px 50px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+}

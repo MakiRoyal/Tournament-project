@@ -36,7 +36,7 @@ class ArticleController extends Controller
             {
                 $this->articleModel->createArticle($_POST['title'], $_FILES['image']['name'], $_POST['place'], $_POST['date'], $_POST['bio']);
             }
-            header('location: /admin/createArticle');
+            header('location: /createArticle');
             exit();
         }
         echo $this->twig->render('createArticle.html.twig');
@@ -45,7 +45,7 @@ class ArticleController extends Controller
     public function deleteArticle(){
         if(isset($_POST)){
             $this->articleModel->deleteArticle(key($_POST));
-            header('location: /admin/createArticle');
+            header('location: /createArticle');
             exit();
         }
     }

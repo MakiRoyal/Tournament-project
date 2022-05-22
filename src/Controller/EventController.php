@@ -37,7 +37,7 @@ class EventController extends Controller
                 $this->eventModel->createEvent($_POST['nom'], $_FILES['image']['name'], $_POST['description'], $_POST['date'], $_POST['place']);
             }
             var_dump($_POST);
-            header('location: /admin/createEvent');
+            header('location: /createEvent');
             exit();
         }
         echo $this->twig->render('createEvent.html.twig');
@@ -48,7 +48,7 @@ class EventController extends Controller
     public function deleteEvent(){
         if(isset($_POST)){
             $this->eventModel->deleteEvent(key($_POST));
-            header('location: /admin/createEvent');
+            header('location: /createEvent');
             exit();
         }
     }

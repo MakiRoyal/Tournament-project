@@ -90,13 +90,13 @@ $router->get('/event', 'Mvc\Controller\EventController@ListEvent');
 
 $router->get('/article', 'Mvc\Controller\ArticleController@ArticleList');
 
-$router->get('/admin/createEvent', 'Mvc\Controller\EventController@EventList');
+$router->get('/createEvent', 'Mvc\Controller\EventController@EventList');
 $router->post('/admin/createEvent/deleteEvent', 'Mvc\Controller\EventController@deleteEvent');
-$router->post('/admin/createEvent', 'Mvc\Controller\EventController@createEvent');
+$router->post('/createEvent', 'Mvc\Controller\EventController@createEvent');
 
-$router->get('/admin/createArticle', 'Mvc\Controller\ArticleController@listArticle');
+$router->get('/createArticle', 'Mvc\Controller\ArticleController@listArticle');
 $router->post('/admin/createArticle/deleteArticle', 'Mvc\Controller\ArticleController@deleteArticle');
-$router->post('/admin/createArticle', 'Mvc\Controller\ArticleController@createArticle');
+$router->post('/createArticle', 'Mvc\Controller\ArticleController@createArticle');
 
 $router->get('/reglage', 'Mvc\Controller\AccueilController@displayReglage');
 

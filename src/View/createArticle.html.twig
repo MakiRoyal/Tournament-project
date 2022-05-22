@@ -2,27 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="assets/style/reset.css" rel="stylesheet" type="text/css" />
     <link href="assets/style/header.css" rel="stylesheet" type="text/css" />
+    <link href="assets/style/createArticle.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
 </head>
 <body>
 
-  {% include "header.html.twig"%}
-    <h1>Hello {{ session.user.firstname }}</h1>
-    <a href="/admin">Admin</a>
+
+
+    {% include "headerAdmin.html.twig"%}
 
 
 
-    <form method="post" action="/admin/createArticle" enctype='multipart/form-data'>
-        <input type="text" name="title" placeholder="Insert title">
-        <textarea name="bio" placeholder="Insert Bio"></textarea>
-        <input type="text" name="date" placeholder="Insert Date">
-        <input type="text" name="place" placeholder="Insert place">
-        <input type="file" name="image" accept="image/*">
-        <input type="submit" name="createEvent" value="Article">
+
+
+
+    <form method="post" action="/createArticle" enctype='multipart/form-data'>
+        <input type="text" name="title" placeholder="Insert title" class="input">
+        <textarea name="bio" placeholder="Insert Bio" class="input"></textarea>
+        <input type="text" name="date" placeholder="Insert Date" class="input">
+        <input type="text" name="place" placeholder="Insert place" class="input">
+        <label for="img" class="imgLabel">Add img</label>
+        <input type="file" id="img" name="image" accept="image/*" class="imgForm">
+        <input type="submit" name="createEvent" value="Article" class="button">
     </form>
 
 
@@ -39,21 +45,18 @@
             </tr>
         {% for article in articles %}
             <tr>
-                <td>{{ article.title }}</td>
-                <td>{{ article.bio }}</td>
-                <td>{{ article.date }}</td>
-                <td>{{ article.place }}</td>
-                <td><img src="http://localhost/images/{{ article.image }}" style="height: 100px"></td>
-                <td>  
+                <th>{{ article.title }}</th>
+                <th>{{ article.bio }}</th>
+                <th>{{ article.date }}</th>
+                <th>{{ article.place }}</th>
+                <th><img src="http://localhost/images/{{ article.image }}" style="height: 100px"></t>
+                <th>  
                     <form method="POST" action="/admin/createArticle/deleteArticle  ">
-                        <input type="submit" name="{{article.id}}" value="Delete">
+                        <input type="submit" name="{{article.id}}" value="Delete" class="buttonDelete">
                     </form>
-                </td>
+                </th>
             </tr>
         {% endfor %}
     </table>
-
-
-
 </body>
 </html>
