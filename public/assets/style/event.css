@@ -31,6 +31,7 @@ h3{
     display: flex;
     flex-direction: column;
     gap: 25px;
+    align-items: flex-start;
 }
 #articles article div a {
     text-decoration: none;
