@@ -16,16 +16,17 @@
 
 
 
-    <h3>Evenements</h3>
+    <h3>Tournoi</h3>
+    <a href="/createTournament" class="tournamentCreate">Créer un tournoi</a>
     <section id="articles">
-    {% for event in events %}
+    {% for tournament in tournaments %}
         <article>
-            <img src="http://localhost/images/{{event.image}}" alt="{{event.image}}">
+            <img src="http://localhost/images/{{tournament.image}}" alt="{{tournament.image}}">
             <div>
-                <h6>{{ event.description }}</h6>
+                <h6>{{ tournament.description }}</h6>
                 <div>
-                    <h6>{{event.date}}</h6>
-                    <h6>{{event.place}}</h6>
+                    <h6>{{tournament.date}}</h6>
+                    <h6>{{tournament.place}}</h6>
                 </div>
                 <a href="">En savoir plus</a>
             </div>

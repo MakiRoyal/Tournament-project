@@ -1,45 +1,22 @@
        {% block header %}
-       <header>    
-        <div class="div">
+       <header>
+       <div class="div">
             <input type="checkbox" id="burger-checkbox">
             <label for="burger-checkbox" class="menu-label" style="background-image: url('http://localhost/images/{{session.user.image1}}');background-size:cover;"></label>
             <div class="menu-wrapper">
                 <nav>
                     <ul>
-                        <li><a href="/">Accueil</a></li>
-                        <li><a href="/profil">Mon Profil</a></li>
-                        <li><a href="/article">Mes Articles</a></li>
-                        <li><a href="/abonnement">Pass Premium</a></li>
-                        <li><a href="/event">Évènements</a></li>
-                        {% if( session.user.role == 'admin')%}
-                          <li><a href="/admin">Admin</a></li>
-                        {% endif %}
-                        <li><div></div></li>
-                        <li><a href="/setting">Réglages</a></li>
                         <li><a href="/deconnection">Déconnexion</a></li>
                     </ul>
                 </nav>
             </div>
-        </div>
-       <a href="/">
-        <img alt="Logo MiiLove" src="https://media.discordapp.net/attachments/951121617642205184/966374494497280000/unknown.png" class="miilove">
-      </a>
+        </div>    
+        <h1>Fifa Tournament</h1>
+        
       <div>
         <input type="checkbox" id="message-checkbox" >
-        <label for="message-checkbox" class="message-label"> Message</label>
+        <label for="message-checkbox" class="message-label"><a href="/login">Accueil</a></label>
         <div class="message-menu">
-                  <nav>
-                      <ul>
-                          {% for user in users %}
-                            <li>
-                              <a href="{{ user.id}}" >
-                                <canvas style="background-image: url('http://localhost/images/{{user.image1}}');background-size:cover;"></canvas>
-                                <h4>{{ user.firstname }}</h4>
-                              </a>
-                            </li>
-                          {% endfor %}
-                      </ul>
-                  </nav>
           </div>
       </div>
     </header>

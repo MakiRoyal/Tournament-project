@@ -1,5 +1,5 @@
 {
-    "name": "ryan/projet",
+    "name": "mika/projet",
     "autoload": {
         "psr-4": {
             "Mvc\\": "src/",
@@ -8,8 +8,8 @@
     },
     "authors": [
         {
-            "name": "MiiLove",
-            "email": "MiiLove@gmail.com"
+            "name": "fifa",
+            "email": "fifa@gmail.com"
         }
     ],
     "require": {

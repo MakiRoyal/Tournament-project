@@ -13,6 +13,12 @@ class AccueilController extends Controller
         echo $this->twig->render('accueil.html.twig');
     }
 
+    public function displayInscription()
+    {
+        // var_dump($_SESSION);
+        echo $this->twig->render('inscription.html.twig');
+    }
+
     public function displayProfil()
     {
         // var_dump($_SESSION);
@@ -68,5 +74,24 @@ class AccueilController extends Controller
         // var_dump($_SESSION);
         echo $this->twig->render('setting.html.twig');
     }
+
+    public function displayLogin()
+    {
+        // var_dump($_SESSION);
+        echo $this->twig->render('accueil.html.twig');
+    }
+
+    public function displayTournament()
+    {
+        // var_dump($_SESSION);
+        echo $this->twig->render('tournament.html.twig');
+    }
+
+    public function displayCreateTournament()
+    {
+        // var_dump($_SESSION);
+        echo $this->twig->render('createTournament.html.twig');
+    }
+    
 }
 

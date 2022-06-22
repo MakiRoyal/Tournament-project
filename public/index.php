@@ -4,6 +4,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 session_start();
 
+
+
 $router = new \Bramus\Router\Router();
 
 $router->before('GET', '/login', function() {
@@ -81,11 +83,10 @@ $router->get('/deconnection', function() {
 
 
 
-
-$router->get('/login', 'Mvc\Controller\UserController@login');
+$router->get('/login', 'Mvc\Controller\AccueilController@displayLogin');
 $router->post('/login', 'Mvc\Controller\UserController@login');
 
-$router->get('/inscription', 'Mvc\Controller\UserController@createUser');
+$router->get('/inscription', 'Mvc\Controller\AccueilController@displayInscription');
 $router->post('/inscription', 'Mvc\Controller\UserController@createUser');
 
 $router->get('/', 'Mvc\Controller\UserController@ListUsers');
@@ -115,6 +116,12 @@ $router->get('/admin', 'Mvc\Controller\AccueilController@displayAdmin');
 $router->get('/header', 'Mvc\Controller\userController@usersList');
 
 $router->get('(\d+)', 'Mvc\Controller\userController@findOneUser');
+
+$router->get('/tournament', 'Mvc\Controller\AccueilController@displayTournament');
+$router->post('/tournament', 'Mvc\Controller\AccueilController@displayCreateTournament');
+
+
+$router->get('/createTournament', 'Mvc\Controller\AccueilController@displayCreateTournament');
 
 
 $router->run();

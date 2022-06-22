@@ -11,17 +11,14 @@
     <title>Document</title>
 </head>
 <body>
-  {% include "headerAdmin.html.twig"%}
+  {% include "header.html.twig"%}
 
 
-     <form method="post" action="/createEvent" enctype='multipart/form-data'>
-        <input type="text" name="nom" placeholder="Insert Name" class="input">
+     <form method="post" action="/tournament" enctype='multipart/form-data'>
+        <input type="text" name="name" placeholder="Insert Name" class="input">
         <textarea name="description" placeholder="Insert Description" class="input"></textarea>
-        <input type="text" name="date" placeholder="Insert Date" class="input">
-        <input type="text" name="place" placeholder="Insert place" class="input">
-        <label for="img" class="imgLabel">Add img</label>
-        <input type="file" id="img" name="image" class="imgForm" accept="image/*">
-        <input type="submit" name="createEvent" value="Event" class="button">
+        <input type="text" name="players" placeholder="Insert Players" class="input">
+        <input type="submit" name="createTournament" value="Créer" class="button">
     </form>
 
 
@@ -35,16 +32,16 @@
                 <th>Image</th>
                 <th>DeleteButton</th>
             </tr>
-        {% for event in events %}
+        {% for tournament in tournaments %}
             <tr>
-                <th>{{ event.nom }}</th>
-                <th>{{ event.description }}</th>
-                <th>{{ event.date }}</th>
-                <th>{{ event.place }}</th>
-                <th><img src="http://localhost/images/{{ event.image }}" style="height: 100px"></th>
+                <th>{{ tournament.nom }}</th>
+                <th>{{ tournament.description }}</th>
+                <th>{{ tournament.date }}</th>
+                <th>{{ tournament.place }}</th>
+                <th><img src="http://localhost/images/{{ tournament.image }}" style="height: 100px"></th>
                 <th>  
-                    <form method="POST" action="/admin/createEvent/deleteEvent">
-                        <input type="submit" name="{{event.id}}" value="Delete" class="buttonDelete">
+                    <form method="POST" action="/admin/createTournament/deleteTournament">
+                        <input type="submit" name="{{tournament.id}}" value="Delete" class="buttonDelete">
                     </form>
                 </th>
             </tr>
